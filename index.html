@@ -38,14 +38,20 @@
 </head>
 
 <body>
+    <!-- <audio src="perdon.mp3">
+        </audio> -->
+        <!-- <audio loop autoplay src="perdon.mp3"></audio> -->
+        <!-- <audio src="perdon.mp3" style="display:none;" autoplay></audio> -->
     <div class="container">
         <center>
             <img src="imagen.gif" alt="gif de perdon" />
         <h1>¿Me perdonas?</h1>
-        <button id="boton" class="btn btn-success" onclick="redirect()">Si!!!</button>
-        <button id="boton2" class="btn btn-danger" onclick="agrandarYmostrarPalabra()">
-            No.
-        </button>
+        <div class="row">
+            <div class="col-12">
+                <button id="boton" class="btn btn-success" onclick="redirect()">Si!!!</button>
+                <button id="boton2" class="btn btn-danger" onclick="agrandarYmostrarPalabra()">No.</button>
+            </div>
+        </div>
         </center>
     </div>
 
@@ -134,14 +140,14 @@
             let boton2 = document.getElementById("boton2");
             let anchoActual = boton.offsetWidth;
             let altoActual = boton.offsetHeight;
-            boton1.style.width = anchoActual + 30 + "px";
-            boton1.style.height = altoActual + 30 + "px";
+            boton1.style.width = anchoActual + 10 + "px";
+            boton1.style.height = altoActual + 10 + "px";
             indicePalabraActual = (indicePalabraActual + 1) % palabras.length;
             boton2.textContent = palabras[indicePalabraActual];
         }
 
         function redirect() {
-            window.location.replace("https://www.facebook.com/watch/?v=2399599613619559");
+            window.location.href = "https://www.facebook.com/watch/?v=2399599613619559";
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
